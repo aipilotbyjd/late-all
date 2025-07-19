@@ -1,3 +1,3 @@
-import { WorkflowBuilder } from "./workflow-builder";
+import { WorkflowBuilderFlow } from "./workflow-builder-flow";
 
-export default WorkflowBuilder;
+export default WorkflowBuilderFlow;

@@ -1,3 +1,3 @@
-import { ExecutionsPageEnhanced } from './executions-page-enhanced'
+import { ExecutionsPageWorking } from './executions-page-working'
 
-export default ExecutionsPageEnhanced;
+export default ExecutionsPageWorking;

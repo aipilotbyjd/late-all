@@ -1,3 +1,3 @@
-import { WorkflowsPageEnhanced } from "./workflows-page-enhanced";
+import { WorkflowsPageWorking } from "./workflows-page-working";
 
-export default WorkflowsPageEnhanced;
+export default WorkflowsPageWorking;

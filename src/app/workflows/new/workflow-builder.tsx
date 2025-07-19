@@ -17,8 +17,8 @@ import {
 import { AppLayout } from "@/components/layouts/app-layout";
 import { Button } from "@/components/base/buttons/button";
 import { Input } from "@/components/base/input/input";
-import { Textarea } from "@/components/base/textarea/textarea";
-import { Select } from "@/components/base/select/select";
+import { TextArea } from "@/components/base/textarea/textarea";
+// Removed Select import as we'll use native select
 
 const headerNavItems = [
     {
@@ -158,11 +158,14 @@ export const WorkflowBuilder = () => {
                                     defaultValue="Untitled Workflow"
                                     className="w-64"
                                 />
-                                <Select defaultValue="draft">
+                                <select 
+                                    className="rounded-lg border border-secondary bg-primary px-3 py-2 text-sm text-secondary focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                                    defaultValue="draft"
+                                >
                                     <option value="draft">Draft</option>
                                     <option value="active">Active</option>
                                     <option value="paused">Paused</option>
-                                </Select>
+                                </select>
                             </div>
                             <div className="flex items-center gap-3">
                                 <Button size="sm" color="tertiary">
@@ -202,11 +205,14 @@ export const WorkflowBuilder = () => {
                                             <p className="text-xs text-tertiary">Workflow starts here</p>
                                         </div>
                                     </div>
-                                    <Select defaultValue="webhook">
+                                    <select 
+                                        className="w-full rounded-lg border border-secondary bg-primary px-3 py-2 text-sm text-secondary focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                                        defaultValue="webhook"
+                                    >
                                         <option value="webhook">Webhook</option>
                                         <option value="schedule">Schedule</option>
                                         <option value="manual">Manual</option>
-                                    </Select>
+                                    </select>
                                 </div>
                             </div>
 
@@ -275,7 +281,7 @@ export const WorkflowBuilder = () => {
                             <label className="block text-sm font-medium text-secondary mb-2">
                                 Description
                             </label>
-                            <Textarea 
+                            <TextArea 
                                 placeholder="Describe what this workflow does..."
                                 rows={3}
                             />
@@ -285,13 +291,16 @@ export const WorkflowBuilder = () => {
                             <label className="block text-sm font-medium text-secondary mb-2">
                                 Category
                             </label>
-                            <Select defaultValue="">
+                            <select 
+                                className="w-full rounded-lg border border-secondary bg-primary px-3 py-2 text-sm text-secondary focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                                defaultValue=""
+                            >
                                 <option value="">Select category</option>
                                 <option value="marketing">Marketing</option>
                                 <option value="communication">Communication</option>
                                 <option value="operations">Operations</option>
                                 <option value="customer-success">Customer Success</option>
-                            </Select>
+                            </select>
                         </div>
 
                         <div>
@@ -316,12 +325,15 @@ export const WorkflowBuilder = () => {
                                     <label className="block text-sm font-medium text-secondary mb-2">
                                         Retry on Failure
                                     </label>
-                                    <Select defaultValue="3">
+                                    <select 
+                                        className="w-full rounded-lg border border-secondary bg-primary px-3 py-2 text-sm text-secondary focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                                        defaultValue="3"
+                                    >
                                         <option value="0">No retries</option>
                                         <option value="1">1 retry</option>
                                         <option value="3">3 retries</option>
                                         <option value="5">5 retries</option>
-                                    </Select>
+                                    </select>
                                 </div>
                             </div>
                         </div>
